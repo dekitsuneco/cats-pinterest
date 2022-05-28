@@ -1,12 +1,16 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import './App.css';
-import { CatsCard } from './components/CatsCard/CatsCard';
+import { Navbar } from './components/Navbar';
+import { useAppSelector } from './store/hooks/redux';
 
 function App() {
+  const { liked } = useAppSelector((state) => state.likedReducer);
+
   return (
     <div className='App'>
-      <CatsCard />
-      <CatsCard />
+      <Navbar />
+      <Outlet />
     </div>
   );
 }
