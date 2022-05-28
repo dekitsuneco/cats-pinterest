@@ -15,9 +15,13 @@ module.exports = {
   },
   plugins: ['react', '@typescript-eslint', 'unused-imports'],
   rules: {
-    '@typescript-eslint/no-unused-vars': 'off',
+    /*'@typescript-eslint/no-unused-vars': 'off',*/
+    'no-shadow': 'off',
+    '@typescript-eslint/no-shadow': 'off',
     'unused-imports/no-unused-imports-ts': 'warn',
-    'unused-imports/no-unused-vars-ts': 'warn',
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': ['warn'],
+    /*'unused-imports/no-unused-vars-ts': 'warn',*/
     'react/jsx-filename-extension': [1, { extensions: ['.tsx', '.ts'] }],
   },
   ignorePatterns: ['.eslintrc.js'],
