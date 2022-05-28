@@ -5,17 +5,15 @@ import styles from './Grid.module.css';
 
 interface GridProps {
   items: Array<CatModel>;
-  onCardLike: (data: CatModel) => void;
 }
 
-const Grid = ({ items, onCardLike: handleHeartClick }: GridProps) => {
+const Grid = ({ items }: GridProps) => {
   return (
     <div className={`${styles.container} ${styles.gallery}`}>
       {items.map((CatData) => (
         <CatCard
           key={`${CatData.id}-${CatData.url}-${new Date().getTime()}`}
           data={CatData}
-          onHeartClick={handleHeartClick}
         />
       ))}
     </div>

@@ -21,7 +21,7 @@ const loadData = async ({
   onLoadStart = () => {},
   onLoadEnd = () => {},
   onFinally = () => {},
-  currentPage,
+  currentPage = 1,
 }: Omit<LoadDataProps, 'deps' | 'shouldFetch'>): Promise<void> => {
   try {
     onLoadStart();
